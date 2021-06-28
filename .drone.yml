@@ -1,9 +1,6 @@
 kind: pipeline
-type: docker
-name: linux-amd64
-platform:
-  arch: amd64
-  os: linux
+name: testing
+
 steps:
 - name: first
   image: golang:1.14.4
@@ -19,7 +16,7 @@ steps:
   image: golang:1.14.4
   commands:
   - echo “Output from third step”;
-  
- depends_on:
+
+  depends_on:
   - first
   - second
