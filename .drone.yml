@@ -3,20 +3,10 @@ name: testing
 
 steps:
 - name: first
-  image: php
-  commands:
-  - echo “Output from first step”;
-
+  image: golang:1.14.4
+ 
 - name: second
-  image: php
-  commands:
-  - echo “Output from second step”;
-
+  image: golang:1.14.4
+  
 - name: third
-  image: php
-  commands:
-  - echo “Output from third step”;
-
-  depends_on:
-  - first
-  - second
+  image: golang:1.14.4
