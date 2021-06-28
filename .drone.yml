@@ -1,9 +1,22 @@
 kind: pipeline
-name: default
+name: testing
 
 steps:
-- name: download  
-  image: plugins/download
-  settings:
-    source: https://github.com/drone/drone-cli/releases/download/v0.8.5/drone_linux_amd64.tar.gz
-    destination: drone_linux.tar.gz
+- name: first
+  image: php
+  commands:
+  - echo “Output from first step”;
+
+- name: second
+  image: php
+  commands:
+  - echo “Output from second step”;
+
+- name: third
+  image: php
+  commands:
+  - echo “Output from third step”;
+
+  depends_on:
+  - first
+  - second
