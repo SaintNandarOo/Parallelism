@@ -17,6 +17,4 @@ steps:
   commands:
   - echo “Output from third step”;
 
-  depends_on:
-  - first
-  - second
+
