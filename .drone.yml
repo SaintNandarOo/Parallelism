@@ -1,0 +1,9 @@
+kind: pipeline
+name: default
+
+steps:
+- name: download  
+  image: plugins/download
+  settings:
+    source: https://github.com/drone/drone-cli/releases/download/v0.8.5/drone_linux_amd64.tar.gz
+    destination: drone_linux.tar.gz
