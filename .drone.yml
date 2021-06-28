@@ -10,3 +10,7 @@ steps:
   
 - name: third
   image: golang:1.14.4
+
+ depends_on:
+  - first
+  - second
