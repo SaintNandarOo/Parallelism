@@ -5,5 +5,21 @@ platform:
   arch: amd64
   os: linux
 steps:
-- name: test
+- name: first
   image: golang:1.14.4
+  commands:
+  - echo “Output from first step”;
+
+- name: second
+  image: golang:1.14.4
+  commands:
+  - echo “Output from second step”;
+
+- name: third
+  image: golang:1.14.4
+  commands:
+  - echo “Output from third step”;
+  
+ depends_on:
+  - first
+  - second
